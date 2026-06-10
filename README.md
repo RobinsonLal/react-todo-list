@@ -23,3 +23,6 @@ This project focuses on understanding core React concepts such as state manageme
 - HTML5
 - CSS3
 
+## Live Demo
+
+🔗 [View Project](https://react-todo-list-robinson.netlify.app)
