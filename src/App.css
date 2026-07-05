@@ -1,16 +1,16 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-#main-container{
+#main-container {
   width: 80%;
   margin-inline: auto;
   margin-top: 25px;
 }
 
-#input-task-box{
+#input-task-box {
   padding: 10px 20px;
   border-radius: 10px;
   border: 2px solid goldenrod;
@@ -25,7 +25,7 @@ li {
   margin-top: 3px;
 }
 
-#add-task-button{
+#add-task-button {
   padding: 10px 20px;
   font-size: 1.5rem;
   font-weight: 400;
@@ -35,10 +35,30 @@ li {
   margin-left: 10px;
 }
 
-#add-task-button:hover{
+#add-task-button:hover {
   background-color: #28464b;
 }
 
-.display-task-container{
+.display-task-container {
   margin-top: 20px;
+}
+
+/* Media Queries */
+
+@media (max-width: 640px) {
+  #main-container {
+    width: 300px;
+  }
+  .add-task-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+}
+
+@media (min-width: 640px) and (max-width: 768px) {
+  #main-container {
+    width: 500px;
+  }
 }
