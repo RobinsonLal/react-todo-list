@@ -26,7 +26,8 @@ function App() {
 
       <div className="add-task-container">
         <input id='input-task-box' type="text" onChange={(e) => setCurNote(e.target.value)} />
-        <button id='add-task-button' onClick={handleSubmit} disabled={curNote.trim() === ""} >Add task</button>
+        {/* <button id='add-task-button' onClick={handleSubmit} disabled={curNote.trim() === ""} >Add task</button> */}
+        <input type="submit" id='add-task-button' onClick={handleSubmit} disabled={curNote.trim() === ""} />
       </div>
 
       <div className="display-task-container">
