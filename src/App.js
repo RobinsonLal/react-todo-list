@@ -24,16 +24,26 @@ function App() {
 
       <h1>Todo List Webapp</h1>
 
-      <div className="add-task-container">
-        <input id='input-task-box' type="text" onChange={(e) => setCurNote(e.target.value)} />
-        {/* <button id='add-task-button' onClick={handleSubmit} disabled={curNote.trim() === ""} >Add task</button> */}
-        <input type="submit" id='add-task-button' onClick={handleSubmit} disabled={curNote.trim() === ""} />
-      </div>
+      <form onSubmit={handleSubmit} >
+        <div className="add-task-container">
+          <input id='input-task-box' type="text" onChange={(e) => setCurNote(e.target.value)} />
+          {/* <button id='add-task-button' onClick={handleSubmit} disabled={curNote.trim() === ""} >Add task</button> */}
+          <input type="submit" id='add-task-button' value="Add Task" onClick={handleSubmit} disabled={curNote.trim() === ""} />
+        </div>
+      </form>
 
       <div className="display-task-container">
-        <ul> {note.map((singleNote, index) => {
+
+        {/* <ul> {note.map((singleNote, index) => {
           return <li key={index} > <Task note={singleNote} onDelete={() => (handleDelete(index))} /> </li>
-        })} </ul>
+        })} </ul> */}
+
+        <ul className="display-task-container">
+          {note.map((singleNote, index) => (
+            <Task key={index} note={singleNote} onDelete={() => handleDelete(index)} />
+          ))}
+        </ul>
+
       </div>
 
     </div>
